@@ -21,6 +21,14 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction: -1, 0, 1 (Brackeys)
 	var direction := Input.get_axis("move_left", "move_right")
 	
+	#no sirve el dash
+	
+	#handle dash
+	#if Input.is_action_just_pressed("dash"):
+		#$dashtimer.start()
+		#SPEED *= 10
+		#velocity.x = direction * SPEED
+	
 	#Flip the sprite (Brackeys)
 	if direction > 0:
 		animated_sprite.flip_h = false
@@ -43,3 +51,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+#no sirve el dash
+#func _on_dashtimer_timeout() -> void:
+	#reset speed to normal
+	#SPEED = 100.0
+	

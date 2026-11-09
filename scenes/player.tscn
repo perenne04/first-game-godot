@@ -185,3 +185,8 @@ autoplay = "iddle"
 z_index = 5
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_ujbc3")
+
+[node name="dashtimer" type="Timer" parent="." unique_id=1241415938]
+wait_time = 0.12
+
+[connection signal="timeout" from="dashtimer" to="." method="_on_dashtimer_timeout"]
